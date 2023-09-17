@@ -14,10 +14,11 @@ Welcome to the Pizza Customization App! This web application allows users to cus
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Contact](#contact)
+- [Feedback](#feedback)
 
 ## Live Demo
 
-Explore the live demo of the Pizza Customization App [here](https://pizza-app-flax.vercel.app/).
+Explore the live demo of the Pizza Customization App [The Pizza Palette](https://pizza-app-flax.vercel.app/).
 
 ## About the Project
 
@@ -45,7 +46,7 @@ To run this application on your local machine, follow these steps:
 ### Prerequisites
 
 - Node.js installed on your computer
-- npm (Node Package Manager) or yarn installed
+- npm (Node Package Manager) installed
 
 ### Installation
 
@@ -99,5 +100,7 @@ For any questions or inquiries, please contact:
 - Akash Keshari
   - Email: akashkeshari2722000@gmail.com
  
+
+## Feedback
 
 - Thank you for using the Pizza Customization App! We hope you enjoy creating and customizing your perfect pizzas. Feel free to reach out if you have any feedback or suggestions. Happy pizza-making!
