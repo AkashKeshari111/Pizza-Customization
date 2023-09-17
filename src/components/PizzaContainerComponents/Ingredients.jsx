@@ -15,8 +15,7 @@ const Ingredients = () => {
       justifyContent={"center"}
       alignItems={"center"}
     >
-      {/* Pizza Base */}
-
+      {/* Pizza Base or Topping List */}
       <Box
         w="90%"
         h="90%"
@@ -24,9 +23,10 @@ const Ingredients = () => {
         position={"relative"}
       >
         {!selectedBase ? (
+          // Display the PizzaBase component if no base is selected
           <PizzaBase />
         ) : (
-          // Topping List
+          // Display the ToppingLists component if a base is selected
           <ToppingLists />
         )}
       </Box>

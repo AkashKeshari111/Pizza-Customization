@@ -2,40 +2,38 @@
 import { useToast } from "@chakra-ui/react";
 import { createContext, useContext, useState } from "react";
 
+// Create a context called SelectedBaseContext
 const SelectedBaseContext = createContext();
 
+// Define a custom hook useSelectedBase to access the context
 export const useSelectedBase = () => {
   return useContext(SelectedBaseContext);
 };
 
+// Create a provider component for the context
 export const SelectedBaseProvider = ({ children }) => {
+  // Define state variables for managing pizza customization
   const [selectedBase, setSelectedBase] = useState(false);
   const [chooseBase, setChooseBase] = useState(null);
   const [toppings, setToppings] = useState([]);
   const [displayFinalPizza, setDisplayFinalPizza] = useState(false);
+  
+  // Use Chakra UI's useToast to display messages
   const toast = useToast();
 
-
-  const [toppingIngredients,setToppingIngredients] = useState([
-    { id:1,name: "MUSHROOM", type: "mushroom-topping", img: "mushroom.png" },
-    { id:2,name: "TOMATO", type: "tomato-topping", img: "tomato.png" },
-    {id:3, name: "OLIVE", type: "olive-topping", img: "olive.png" },
-  ]);
-
-
-
-
-
+  // Handler function to cancel pizza customization
   const handleCancelPizza = () => {
     setChooseBase(null);
     setToppings([]);
     setSelectedBase(false);
   };
 
+  // Handler function to serve the pizza
   const handleServePizza = () => {
     if (selectedBase && toppings.length > 2) {
       setDisplayFinalPizza(true);
     } else {
+      // Display a toast message if ingredients are not selected properly
       toast({
         title: "Select Ingredients",
         description: "Please select at least 3 toppings before serving!",
@@ -46,12 +44,14 @@ export const SelectedBaseProvider = ({ children }) => {
     }
   };
 
+  // Handler function to create a new pizza
   const handleNewPizza = () => {
     handleCancelPizza();
     setDisplayFinalPizza(false);
   };
 
   return (
+    // Provide the context values and functions to child components
     <SelectedBaseContext.Provider
       value={{
         selectedBase,
@@ -65,8 +65,6 @@ export const SelectedBaseProvider = ({ children }) => {
         handleServePizza,
         handleCancelPizza,
         handleNewPizza,
-        toppingIngredients,
-        setToppingIngredients,
       }}
     >
       {children}

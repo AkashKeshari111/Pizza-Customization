@@ -39,7 +39,7 @@ const PizzaModel = () => {
 
   const imageStyle = {
     position: "absolute",
-    transition: "transform 0.8s ease-in-out"
+    transition: "transform 0.8s ease-in-out", 
   };
 
   return (
@@ -49,7 +49,6 @@ const PizzaModel = () => {
       alignItems="center"
       w="100%"
       h="100%"
-      //   border="1px solid red"
       position="relative"
     >
       <Box
@@ -63,8 +62,6 @@ const PizzaModel = () => {
         boxShadow="rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px"
       >
         {/* Ingredients layers */}
-
-    
 
         {chooseBase && (
           <Image
@@ -86,8 +83,8 @@ const PizzaModel = () => {
           />
         ))}
 
-
-{displayFinalPizza && (
+        {/* Display the "cut.png" image when the final pizza is served */}
+        {displayFinalPizza && (
           <Image
             src={"cut.png"}
             style={imageStyle}

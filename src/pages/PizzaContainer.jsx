@@ -12,12 +12,14 @@ const PizzaContainer = () => {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      flexDir={{base:"column",lg:"row"}}
+      flexDir={{base:"column",lg:"row"}} // Flex direction based on screen size
     >
       <Box w="50%" h="100%">
+        {/* Display the PizzaModel component  */}
         <PizzaModel />
       </Box>
       <Box w="50%" h="100%">
+        {/* Display the Ingredients component  */}
         <Ingredients />
       </Box>
     </Box>

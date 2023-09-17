@@ -2,22 +2,19 @@ import { Box, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { useDrag } from "react-dnd";
 
-const Topping = ({ name, img,choppedImg}) => {
+const Topping = ({ name, img, choppedImg }) => {
+  // Define a draggable topping using react-dnd
   const [{ isDragging }, drag] = useDrag({
-    type: "TOPPING",
-    item: { type: "TOPPING", name, img },
+    type: "TOPPING", // Specify the type as "TOPPING"
+    item: { type: "TOPPING", name, img }, // Set the item type and data to identify it as a topping
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
     }),
   });
 
-  
-
   return (
     <Box
-     
       style={{ opacity: isDragging ? 0.5 : 1 }}
-      // bg="#f5e08e"
       w="100px"
       height="100px"
       rounded={"50%"}
@@ -26,8 +23,11 @@ const Topping = ({ name, img,choppedImg}) => {
       justifyContent={"center"}
       flexDir={"column"}
     >
-   <Image src={choppedImg}  ref={drag}/>
-   <Text>{name}</Text>
+      {/* Display the chopped image of the topping */}
+      <Image src={choppedImg} ref={drag} />
+
+      {/* Display the name of the topping */}
+      <Text>{name}</Text>
     </Box>
   );
 };
