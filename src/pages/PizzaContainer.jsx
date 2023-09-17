@@ -12,6 +12,7 @@ const PizzaContainer = () => {
       display="flex"
       alignItems="center"
       justifyContent="center"
+      flexDir={{base:"column",lg:"row"}}
     >
       <Box w="50%" h="100%">
         <PizzaModel />

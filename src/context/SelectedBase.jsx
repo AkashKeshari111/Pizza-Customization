@@ -15,6 +15,17 @@ export const SelectedBaseProvider = ({ children }) => {
   const [displayFinalPizza, setDisplayFinalPizza] = useState(false);
   const toast = useToast();
 
+
+  const [toppingIngredients,setToppingIngredients] = useState([
+    { id:1,name: "MUSHROOM", type: "mushroom-topping", img: "mushroom.png" },
+    { id:2,name: "TOMATO", type: "tomato-topping", img: "tomato.png" },
+    {id:3, name: "OLIVE", type: "olive-topping", img: "olive.png" },
+  ]);
+
+
+
+
+
   const handleCancelPizza = () => {
     setChooseBase(null);
     setToppings([]);
@@ -22,12 +33,12 @@ export const SelectedBaseProvider = ({ children }) => {
   };
 
   const handleServePizza = () => {
-    if (selectedBase && toppings.length > 0) {
+    if (selectedBase && toppings.length > 2) {
       setDisplayFinalPizza(true);
     } else {
       toast({
         title: "Select Ingredients",
-        description: "Please select toppings before serving!",
+        description: "Please select at least 3 toppings before serving!",
         status: "info",
         duration: 3000,
         isClosable: true,
@@ -54,6 +65,8 @@ export const SelectedBaseProvider = ({ children }) => {
         handleServePizza,
         handleCancelPizza,
         handleNewPizza,
+        toppingIngredients,
+        setToppingIngredients,
       }}
     >
       {children}

@@ -1,8 +1,8 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { useDrag } from "react-dnd";
 
-const Topping = ({ name, img, onDrop }) => {
+const Topping = ({ name, img,choppedImg}) => {
   const [{ isDragging }, drag] = useDrag({
     type: "TOPPING",
     item: { type: "TOPPING", name, img },
@@ -11,19 +11,23 @@ const Topping = ({ name, img, onDrop }) => {
     }),
   });
 
+  
+
   return (
     <Box
-      ref={drag}
+     
       style={{ opacity: isDragging ? 0.5 : 1 }}
-      onDrop={onDrop}
-      bg="#f5e08e"
-      w="250px"
-      height="50px"
+      // bg="#f5e08e"
+      w="100px"
+      height="100px"
+      rounded={"50%"}
       display={"flex"}
       alignItems={"center"}
       justifyContent={"center"}
+      flexDir={"column"}
     >
-      {name}
+   <Image src={choppedImg}  ref={drag}/>
+   <Text>{name}</Text>
     </Box>
   );
 };

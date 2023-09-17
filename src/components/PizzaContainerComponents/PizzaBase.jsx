@@ -2,7 +2,7 @@ import { Box, Text } from "@chakra-ui/react";
 import React from "react";
 import Base from "./Base";
 
-const PizzaBase = ({ onDrop }) => {
+const PizzaBase = () => {
   const baseIngredients = [
     { name: "Thick Base", type: "thick-base", img: "thick.png" },
     { name: "Thin Base", type: "thin-base", img: "thin.png" },
@@ -25,7 +25,6 @@ const PizzaBase = ({ onDrop }) => {
             name={base.name}
             type={base.type}
             img={base.img}
-            onDrop={onDrop}
           />
         ))}
       </Box>

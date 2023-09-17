@@ -2,7 +2,7 @@ import { Box, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import { useDrag } from "react-dnd";
 
-const Base = ({ name, img, onDrop }) => {
+const Base = ({ name, img }) => {
   const [{ isDragging }, drag] = useDrag({
     type: "PIZZA_BASE",
     item: { type: "PIZZA_BASE", name, img },
@@ -15,7 +15,6 @@ const Base = ({ name, img, onDrop }) => {
     <Box
       ref={drag}
       opacity={isDragging ? 0.5 : 1}
-      onDrop={onDrop}
       w="20%"
       h="20%"
       display={"flex"}
