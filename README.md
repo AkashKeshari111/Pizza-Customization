@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Pizza Customization App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Pizza Customization App! This web application allows users to customize their own pizzas with various bases and toppings.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Live Demo](#live-demo)
+- [About the Project](#about-the-project)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Contact](#contact)
 
-### `npm start`
+## Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Explore the live demo of the Pizza Customization App [here](https://pizza-app-flax.vercel.app/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## About the Project
 
-### `npm test`
+This project was created as an assignment for [Convrse.ai](https://www.convrse.ai/). It allows users to customize their pizzas by selecting different bases and toppings. The application is designed to provide an interactive and enjoyable user experience.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- Choose between thick and thin pizza bases.
+- Add various toppings to your pizza, including mushrooms, tomatoes, olives, salt, and sauce.
+- Visualize your customized pizza in real-time.
+- Serve your pizza once you've selected at least three toppings.
+- Start a new pizza from scratch.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React.js
+- Chakra UI
+- React DnD (Drag and Drop)
+- HTML5 and CSS3
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+To run this application on your local machine, follow these steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js installed on your computer
+- npm (Node Package Manager) or yarn installed
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository to your local machine:
 
-## Learn More
+   ```bash
+   git clone https://github.com/AkashKeshari111/Pizza-Customization.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Navigate to the project directory:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+  cd Pizza-Customization
 
-### Code Splitting
+3. Install the required dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```bash
+   npm install
 
-### Analyzing the Bundle Size
+ 4. Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+      ```bash
+    npm start
 
-### Making a Progressive Web App
+ 5. Open your web browser and visit [localhost](http://localhost:3000)  to view the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To use the Pizza Customization App, follow these simple steps:
 
-### Deployment
+1. Choose your desired pizza base by clicking on the options provided.
+2. Drag and drop toppings onto your pizza.
+3. Click the "Serve Pizza" button when you've added at least three toppings.
+4. To start a new pizza, click the "Make New Pizza" button.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing
 
-### `npm run build` fails to minify
+Contributions are welcome! If you'd like to contribute to this project, please follow these guidelines:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork the project.
+2. Create your feature branch (`git checkout -b feature/YourFeatureName`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeatureName`).
+5. Open a pull request.
+
+
+## Contact
+
+For any questions or inquiries, please contact:
+
+- Akash Keshari
+  - Email: akashkeshari2722000@gmail.com
+ 
+
+- Thank you for using the Pizza Customization App! We hope you enjoy creating and customizing your perfect pizzas. Feel free to reach out if you have any feedback or suggestions. Happy pizza-making!
