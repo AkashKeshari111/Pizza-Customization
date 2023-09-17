@@ -58,7 +58,7 @@ To run this application on your local machine, follow these steps:
 2. Navigate to the project directory:
 
    ```bash
-  cd Pizza-Customization
+    cd pizza-app
 
 3. Install the required dependencies:
 
